@@ -1,10 +1,5 @@
 """
 Part 1 - Task 1: Generate the exact seeded orders dataset.
-
-DO NOT modify np.random.default_rng(42) or any fixed category/payment lists --
-the acceptance criteria depend on this exact, deterministic output.
-
-Run: python3 generate_orders.py
 Output: orders_dataset.csv (6000 rows, 13 columns) in the current directory.
 """
 

@@ -1,7 +1,7 @@
 """
 Part 1 - Task 6: Logistic Regression, tuned via threshold sweep.
 
-Run from the repo root: python3 src/train_logistic_regression.py
+Run from the repo root: python src/train_logistic_regression.py
 """
 
 import sys
@@ -15,9 +15,10 @@ from sklearn.metrics import (
     accuracy_score, f1_score, recall_score, precision_score, roc_auc_score,
 )
 
-from preprocessing import build_preprocessor, load_split
-
-X_train, X_test, y_train, y_test = load_split("orders_dataset.csv")
+from preprocessing import load_data, make_splits, build_preprocessor
+ 
+X, y = load_data()
+X_train, X_test, y_train, y_test = make_splits(X, y)
 
 lr_pipe = Pipeline(steps=[
     ("preprocess", build_preprocessor()),
