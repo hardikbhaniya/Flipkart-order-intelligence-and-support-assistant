@@ -55,5 +55,5 @@ df = pd.DataFrame({
     "delivery_distance_km": delivery_distance_km, "delivery_days": delivery_days.astype(int),
     "is_weekend_order": is_weekend_order, "rating_given": rating_given, "returned": returned,
 })
-df.to_csv("orders_dataset.csv", index=False)
+df.to_csv("part1/src/orders_dataset.csv", index=False)
 print("Rows:", len(df), "| Return rate:", round(df["returned"].mean(), 4))

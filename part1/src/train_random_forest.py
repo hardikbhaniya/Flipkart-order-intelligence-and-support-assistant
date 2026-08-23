@@ -107,5 +107,5 @@ regardless of how many split points it offered the tree.
 # Save intermediate objects for subgroup_analysis.py and save_artifact.py
 import joblib
 joblib.dump({"preprocessor": pre, "model": best_rf, "feature_names": feature_names},
-            "src/models/_rf_intermediate.pkl")
+            "part1/models/_rf_intermediate.pkl")
 print("Saved intermediate RF + preprocessor for downstream tasks.")

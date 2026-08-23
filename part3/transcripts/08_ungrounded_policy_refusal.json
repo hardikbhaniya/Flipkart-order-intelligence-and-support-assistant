@@ -1,0 +1,17 @@
+[
+  {
+    "user_input": "What is Flipkart's policy on interstellar shipping to Mars?",
+    "final_answer": {
+      "answer": "I don't have a policy document confident enough to answer that (best match similarity 0.2922 is below my 0.35 grounding threshold), so rather than guess, I'd recommend checking with a human support agent for this specific question.",
+      "source": "policy_kb",
+      "confidence": 0.2922
+    },
+    "debug": {
+      "groundedness": {
+        "grounded": false,
+        "top_score": 0.2922,
+        "threshold": 0.35
+      }
+    }
+  }
+]

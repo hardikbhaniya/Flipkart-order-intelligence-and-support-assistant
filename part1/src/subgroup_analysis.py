@@ -8,7 +8,7 @@ from preprocessing import load_data, make_splits
 X, y = load_data()
 X_train, X_test, y_train, y_test = make_splits(X, y)
 
-bundle = joblib.load("src/models/_rf_intermediate.pkl")
+bundle = joblib.load("part1/models/_rf_intermediate.pkl")
 pre, best_rf = bundle["preprocessor"], bundle["model"]
 
 Xt_test = pre.transform(X_test)

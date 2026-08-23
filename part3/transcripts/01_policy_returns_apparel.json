@@ -1,0 +1,17 @@
+[
+  {
+    "user_input": "How many days do I have to return a pair of shoes?",
+    "final_answer": {
+      "answer": "Based on our policy documentation: Apparel and footwear items can be returned within 30 days of delivery. Size and color exchanges for apparel and footwear are allowed within the same 30-day return window, subject to stock availability of the requested size or color.",
+      "source": "policy_kb",
+      "confidence": 0.6037
+    },
+    "debug": {
+      "groundedness": {
+        "grounded": true,
+        "top_score": 0.6605,
+        "threshold": 0.35
+      }
+    }
+  }
+]

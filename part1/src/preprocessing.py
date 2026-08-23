@@ -28,7 +28,7 @@ CATEGORICAL_FEATURES = ["product_category", "payment_method"]
 TARGET = "returned"
 
 
-def load_data(path="orders_dataset.csv"):
+def load_data(path="part1/src/orders_dataset.csv"):
     df = pd.read_csv(path)
     X = df[NUMERIC_FEATURES + CATEGORICAL_FEATURES]
     y = df[TARGET]

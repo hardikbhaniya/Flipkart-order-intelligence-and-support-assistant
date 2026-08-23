@@ -1,0 +1,11 @@
+[
+  {
+    "user_input": "What category does this product photo belong to?",
+    "final_answer": {
+      "answer": "This product image is classified as 'Sneaker' with 99.88% confidence.",
+      "source": "image_classifier_tool",
+      "confidence": 0.9988
+    },
+    "debug": {}
+  }
+]
