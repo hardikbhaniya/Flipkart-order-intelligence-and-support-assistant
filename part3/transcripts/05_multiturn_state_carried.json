@@ -1,0 +1,38 @@
+[
+  {
+    "user_input": "Is order #48213 likely to be returned?",
+    "final_answer": {
+      "answer": "This order has an estimated return probability of 66.08%, placing it in the 'High' risk bucket (cut points: Low < 0.50 <= Medium < 0.65 <= High).",
+      "source": "return_risk_tool",
+      "confidence": 0.6608
+    },
+    "debug": {
+      "session_after_turn": {
+        "last_order_features": {
+          "price_inr": 1800,
+          "discount_pct": 35.0,
+          "customer_tenure_days": 120,
+          "num_previous_orders": 4,
+          "num_previous_returns": 2,
+          "delivery_distance_km": 400.0,
+          "delivery_days": 6,
+          "is_weekend_order": 1,
+          "rating_given": 3.0,
+          "product_category": "Apparel",
+          "payment_method": "COD"
+        }
+      }
+    }
+  },
+  {
+    "user_input": "What risk bucket is that order in again?",
+    "final_answer": {
+      "answer": "This order has an estimated return probability of 66.08%, placing it in the 'High' risk bucket (cut points: Low < 0.50 <= Medium < 0.65 <= High).",
+      "source": "return_risk_tool",
+      "confidence": 0.6608
+    },
+    "debug": {
+      "note": "order_features reused from session state set in turn 1"
+    }
+  }
+]

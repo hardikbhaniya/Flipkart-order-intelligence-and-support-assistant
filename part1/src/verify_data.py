@@ -9,7 +9,7 @@ classification with numeric evidence.
 
 import pandas as pd
 
-df = pd.read_csv("orders_dataset.csv")
+df = pd.read_csv("part1/src/orders_dataset.csv")
 
 print("=" * 60)
 print("TASK 3: DATA VERIFICATION")

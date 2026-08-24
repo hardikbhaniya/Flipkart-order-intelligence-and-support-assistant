@@ -63,17 +63,17 @@ print(f"  Precision at t*_rf: {precision_star:.4f}")
 
 # Save artifact
 import os
-os.makedirs("src/models", exist_ok=True)
-joblib.dump(final_pipeline, "src/models/return_risk_model.pkl")
-print("\nSaved: src/models/return_risk_model.pkl")
+os.makedirs("part1/models", exist_ok=True)
+joblib.dump(final_pipeline, "part1/models/return_risk_model.pkl")
+print("\nSaved: part1/models/return_risk_model.pkl")
 
 # Sanity check: reload and confirm predict_proba matches
-reloaded = joblib.load("src/models/return_risk_model.pkl")
+reloaded = joblib.load("part1/models/return_risk_model.pkl")
 reload_proba = reloaded.predict_proba(X_test)[:, 1]
 assert np.allclose(proba_test, reload_proba), "Mismatch after reload!"
 print("Sanity check passed: reloaded model's predict_proba matches in-memory model.")
 
 # Persist t*_rf alongside the model for Part 3 to read
-with open("src/models/t_star_rf.txt", "w") as f:
+with open("part1/models/t_star_rf.txt", "w") as f:
     f.write(str(t_star_rf))
-print(f"Saved t*_rf = {t_star_rf} to src/models/t_star_rf.txt")
+print(f"Saved t*_rf = {t_star_rf} to part1/models/t_star_rf.txt")

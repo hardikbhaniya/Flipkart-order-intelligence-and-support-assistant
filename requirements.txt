@@ -1,0 +1,16 @@
+# Part 1 -- Return-Risk Scoring
+numpy
+pandas
+scikit-learn
+joblib
+
+# Part 2 -- Image Classifier
+torch
+torchvision
+Pillow
+
+# Part 3 -- Support Agent
+langgraph
+langchain-core
+sentence-transformers
+faiss-cpu

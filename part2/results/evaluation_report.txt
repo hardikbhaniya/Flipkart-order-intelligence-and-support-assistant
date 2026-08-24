@@ -1,0 +1,42 @@
+============================================================
+TASK 5: FINAL TEST-SET EVALUATION
+============================================================
+Test accuracy: 0.8892 (88.92%)
+Meets the required >= 80% test accuracy bar.
+
+--- 10x10 Confusion Matrix (rows=true, cols=predicted) ---
+        T-shir Trouse Pullov  Dress   Coat Sandal  Shirt Sneake    Bag Ankle 
+T-shirt/   825      4     20     40      2      0    103      0      5      1
+ Trouser     2    971      0     23      1      0      3      0      0      0
+Pullover    13      0    867     10     50      0     59      0      1      0
+   Dress    10      5     17    902     22      0     44      0      0      0
+    Coat     1      1     71     44    776      0    104      0      3      0
+  Sandal     0      0      0      0      0    953      1     37      2      7
+   Shirt   113      0     51     43     75      0    713      0      5      0
+ Sneaker     0      0      0      0      0     16      0    969      1     14
+     Bag     2      0      2      3      1      2     10      0    979      1
+Ankle bo     0      0      0      1      1     12      0     48      1    937
+
+--- Per-class precision / recall ---
+T-shirt/top     precision=0.8540  recall=0.8250
+Trouser         precision=0.9898  recall=0.9710
+Pullover        precision=0.8434  recall=0.8670
+Dress           precision=0.8462  recall=0.9020
+Coat            precision=0.8362  recall=0.7760
+Sandal          precision=0.9695  recall=0.9530
+Shirt           precision=0.6876  recall=0.7130
+Sneaker         precision=0.9194  recall=0.9690
+Bag             precision=0.9819  recall=0.9790
+Ankle boot      precision=0.9760  recall=0.9370
+
+--- Top confused pairs (read directly from confusion matrix) ---
+True=Shirt           Predicted=T-shirt/top     count=113
+True=Coat            Predicted=Shirt           count=104
+
+--- Task 6 interpretation (auto-generated from YOUR actual top-2 pairs) ---
+
+Shirt <-> T-shirt/top (confused 113 times):
+Shirt and T-shirt/top share a nearly identical boxy upper-body silhouette at 28x28 resolution -- the main visual difference (collar, button placket, sleeve length) collapses into just a handful of pixels, so the model plausibly leans on overall shape alone and confuses the two.
+
+Coat <-> Shirt (confused 104 times):
+Shirt and Coat are both upper-body garments with a similar boxy torso outline at low resolution; a Coat's extra bulk and a Shirt's collar are fine details that are hard for a CNN to resolve at 28x28 source resolution, so the model plausibly confuses them based on the shared overall garment shape.

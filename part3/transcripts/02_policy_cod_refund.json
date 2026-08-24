@@ -1,0 +1,17 @@
+[
+  {
+    "user_input": "When will I get my refund if I paid cash on delivery?",
+    "final_answer": {
+      "answer": "Based on our policy documentation: For Cash on Delivery orders, refunds are issued to the customer's bank account via NEFT, since no original payment method exists to refund back to. For prepaid orders (card, UPI, or wallet), refunds are credited back to the original payment method within 3-5 business days of the return being approved.",
+      "source": "policy_kb",
+      "confidence": 0.5971
+    },
+    "debug": {
+      "groundedness": {
+        "grounded": true,
+        "top_score": 0.6193,
+        "threshold": 0.35
+      }
+    }
+  }
+]

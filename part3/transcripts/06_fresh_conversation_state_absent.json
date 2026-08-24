@@ -1,0 +1,13 @@
+[
+  {
+    "user_input": "What risk bucket is that order in again?",
+    "final_answer": {
+      "answer": "I don't have an order to reference yet in this conversation -- could you share the order ID or its details so I can check the return risk?",
+      "source": "policy_kb",
+      "confidence": 0.0
+    },
+    "debug": {
+      "note": "Fresh session={} -- no prior order_features exist, so order_features is None here (state correctly reset)."
+    }
+  }
+]
