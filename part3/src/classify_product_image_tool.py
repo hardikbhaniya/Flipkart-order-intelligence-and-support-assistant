@@ -19,7 +19,7 @@ PART2_MODEL_PATH = os.path.join(PART2_SRC, "../models/product_classifier.pt")
 
 def classify_product_image(image_path: str) -> dict:
     """
-    image_path should point at one of the real .png files exported in
+    image_path is pointing at one of the real .png files exported in
     Part 2 Task 8 (e.g. ../../data/sample_images/03_sneaker.png).
     """
     result = predict_image(image_path, model_path=PART2_MODEL_PATH)
